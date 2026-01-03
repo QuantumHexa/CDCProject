@@ -9,7 +9,9 @@ export async function GET() {
 
         const existingUser = await User.findOne({ email: "admin@example.com" });
         if (existingUser) {
-            return NextResponse.json({ message: "Admin user already exists!" });
+            existingUser.password = "admin123";
+            await existingUser.save();
+            return NextResponse.json({ message: "Admin user already exists. Password RESET to: admin123" });
         }
 
         const newUser = await User.create({
