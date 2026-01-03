@@ -77,6 +77,7 @@ npm run dev
 70: 1.  Keep the server running.
 71: 2.  Visit this URL in your browser: `http://localhost:3000/api/seed`
 72: 3.  You will see a success message: `Admin user created successfully`.
+
 73: 4.  Now you can log in!
 
 ## 🔑 Default Credentials
