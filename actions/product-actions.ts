@@ -9,7 +9,6 @@ import { redirect } from "next/navigation";
 export async function createProduct(data: ProductFormValues) {
     try {
         const conn = await connectToDatabase();
-        if (!conn) return { error: "Demo mode: Database not connected" };
 
         const validatedFields = productSchema.safeParse(data);
 
@@ -78,14 +77,6 @@ export async function deleteProducts(ids: string[]) {
 
 export async function getProducts(query?: string, page = 1, limit = 10) {
     const conn = await connectToDatabase();
-    if (!conn) {
-        return {
-            products: [],
-            totalPages: 0,
-            currentPage: 1,
-            totalProducts: 0,
-        };
-    }
     const skip = (page - 1) * limit;
 
     const filter = query
