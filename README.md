@@ -68,17 +68,17 @@ NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET=your_unsigned_preset
 npm run dev
 ```
 
-64: Visit `http://localhost:3000` in your browser.
-65: 
-66: ### 4. Initialize Database (Important!)
-67: 
-68: On the first run, your database will be empty. To create the initial Admin account:
-69: 
-70: 1.  Keep the server running.
-71: 2.  Visit this URL in your browser: `http://localhost:3000/api/seed`
-72: 3.  You will see a success message: `Admin user created successfully`.
+Visit `http://localhost:3000` in your browser.
 
-73: 4.  Now you can log in!
+### 4. Initialize Database (Important!)
+
+On the first run, your database will be empty. To create the initial Admin account:
+
+1.  Keep the server running.
+2.  Visit this URL in your browser: `http://localhost:3000/api/seed`
+3.  You will see a success message: `Admin user created successfully`.
+
+4.  Now you can log in!
 
 ## 🔑 Default Credentials
 
