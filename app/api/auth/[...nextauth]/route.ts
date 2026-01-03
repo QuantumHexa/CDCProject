@@ -29,9 +29,8 @@ export const authOptions: NextAuthOptions = {
                 }
 
                 // Also allow a hardcoded fallback if no user exists yet
-                if (credentials.email === "admin@example.com" && credentials.password === "admin123") {
-                    return { id: "0", email: "admin@example.com", role: "admin" };
-                }
+                // Fallback removed for production
+                return null;
 
                 return null;
             },

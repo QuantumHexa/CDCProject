@@ -28,7 +28,7 @@ async function connectToDatabase() {
 
     if (!cached.promise) {
         if (!MONGODB_URI) {
-            return null;
+            throw new Error("Please define the MONGODB_URI environment variable inside .env.local");
         }
         const opts = {
             bufferCommands: false,
