@@ -77,11 +77,3 @@ The system will allow login with these fallback credentials if no database user 
 -   **Email**: `admin@example.com`
 -   **Password**: `admin123`
 
-## Deployment
-
-This project is optimized for deployment on **Vercel**.
-
-1.  Push to GitHub.
-2.  Import project in Vercel.
-3.  Add environment variables in Vercel dashboard.
-4.  Deploy!
