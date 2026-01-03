@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Admin Dashboard - Server-Rendered E-Commerce Panel
 
-## Getting Started
+A premium, server-side rendered (SSR) administrative dashboard build with Next.js 16, designed for managing an e-commerce platform's products and orders.
 
-First, run the development server:
+## 🚀 Features
+
+-   **Dashboard Overview**: Real-time sales and revenue visualization using **Recharts**.
+-   **Product Managment (CRUD)**:
+    -   Create, Read, Update, and Delete products.
+    -   Secure image upload with **Cloudinary**.
+    -   Server-side validation using **Zod**.
+-   **Authentication**: Secure admin access via **NextAuth.js** (Credentials Provider).
+-   **Premium UI**:
+    -   Built with **Shadcn UI** and **Tailwind CSS**.
+    -   Fully responsive design.
+    -   Built with **Shadcn UI** and **Tailwind CSS**.
+    -   Fully responsive design.
+    -   Dark/Light mode support.
+-   **Advanced Features**:
+    -   **Real-time Search**: Debounced product search.
+    -   **Bulk Actions**: Select and delete multiple products.
+    -   **Data Export**: Download product data as CSV.
+    -   **Feedback**: Toast notifications for all actions.
+
+## 🛠️ Tech Stack
+
+-   **Framework**: Next.js 16 (App Router)
+-   **Language**: TypeScript
+-   **Database**: MongoDB (Mongoose ORM)
+-   **Authentication**: NextAuth.js
+-   **Styling**: Tailwind CSS, Shadcn UI, Lucide Icons
+-   **Forms**: React Hook Form + Zod
+-   **Charts**: Recharts
+
+## 📦 Getting Started
+
+### Prerequisites
+
+-   Node.js 18+
+-   MongoDB Atlas Account
+-   Cloudinary Account
+
+### 1. Clone & Install
+
+```bash
+git clone <repository-url>
+cd admin-dashboard
+npm install
+```
+
+### 2. Configure Environment
+
+Create a `.env.local` file in the root directory:
+
+```env
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/dashboard
+NEXTAUTH_SECRET=your_super_secret_key
+NEXTAUTH_URL=http://localhost:3000
+
+# Cloudinary
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your_cloud_name
+NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET=your_unsigned_preset
+```
+
+### 3. Run Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000` in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🔑 Default Credentials
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The system will allow login with these fallback credentials if no database user is found (for demo purposes):
 
-## Learn More
+-   **Email**: `admin@example.com`
+-   **Password**: `admin123`
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is optimized for deployment on **Vercel**.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1.  Push to GitHub.
+2.  Import project in Vercel.
+3.  Add environment variables in Vercel dashboard.
+4.  Deploy!
