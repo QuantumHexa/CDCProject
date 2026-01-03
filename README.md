@@ -78,19 +78,11 @@ On the first run, your database will be empty. To create the initial Admin accou
 2.  Visit this URL in your browser: `http://localhost:3000/api/seed`
 3.  You will see a success message: `Admin user created successfully`.
 
-## 🚀 Deployment (Vercel)
+## 🚀 Live Demo
 
-This project is optimized for **Vercel**. Follow these steps to go live:
+**View the Live Project here:** `https://cdcproject02022-git-main-quantumhexas-projects.vercel.app`
 
-1.  **Push to GitHub**: Make sure your latest code is on GitHub.
-2.  **Go to Vercel**: Import your repository.
-3.  **Environment Variables**: You **MUST** add these in Vercel settings during deployment:
-    *   `MONGODB_URI`
-    *   `NEXTAUTH_SECRET`
-    *   `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME`
-    *   `NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET`
-4.  **MongoDB Network Access**: Go to MongoDB Atlas -> Network Access -> Add IP Address -> Allow Access from Anywhere (`0.0.0.0/0`).
-5.  **Deploy**: Click "Deploy" and wait for the success confetti! 🎉
+*(Note: If the link is not active, please refer to the "Getting Started" section to run locally)*
 
 ## 🔑 Default Credentials
 
